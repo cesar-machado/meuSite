@@ -27,25 +27,27 @@ header {
 
 .menu li {
     list-style: none;
-    padding: 15px 20px;
     cursor: pointer;
+    padding: 15px 20px;
 }
 
-.menu a {
+.links a {
     text-decoration: none;
     list-style: none;
     color: whitesmoke;
+    padding: 15px 20px;
     margin: 20px;
 }
 
-.links li:hover {
+
+/* .links a:hover {
     background-color: #203A43;
     line-height: 12px;
     padding: 15px 12px;
     border-radius: 10px;
     opacity: 0.7;
     transition: 0.5s;
-}
+} */
 
 .menu img {
     margin-left: 100px;
@@ -69,7 +71,7 @@ header {
     .links {
         position: absolute;
         right: 0px;
-        height: 100vh;
+        height: 50vh;
         top: 50px;
         background-color: teal;
         display: flex;
@@ -93,6 +95,31 @@ header {
     align-items: center;
 }
 
+.redes a {
+    text-decoration: none;
+}
+
 .redes i {
     margin-left: 30px;
+    color: rgb(8, 8, 8);
+}
+
+.linked i:hover {
+    text-shadow: 0px 0px 10px #eff4f7;
+    color: #066794
+}
+
+.twitter i:hover {
+    text-shadow: 0px 0px 10px #eff4f7;
+    color: #00acee
+}
+
+.github i:hover {
+    text-shadow: 0px 0px 10px #eff4f7;
+    color: #4e4e4e
+}
+
+.insta i:hover {
+    text-shadow: 0px 0px 10px #eff4f7;
+    color: #a517e7
 }
