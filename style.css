@@ -59,8 +59,9 @@ header {
 }
 
 @media screen and (max-width: 650px) {
+    html,
     body {
-        overflow: hidden;
+        overflow-x: hidden
     }
     .burguer {
         display: flex;
@@ -89,8 +90,9 @@ header {
 }
 
 @media screen and (max-width: 400px) {
+    html,
     body {
-        overflow: hidden;
+        overflow-x: hidden
     }
     .links {
         position: absolute;
@@ -170,6 +172,10 @@ header {
 }
 
 @media screen and (max-width: 500px) {
+    html,
+    body {
+        overflow-x: hidden
+    }
     #sobre {
         align-items: flex-start;
     }
