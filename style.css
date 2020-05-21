@@ -5,19 +5,30 @@
 
 body {
     background-color: rgb(32, 32, 32);
-    font-family: 'Inconsolata', monospace;
+    font-family: "Inconsolata", monospace;
     color: whitesmoke;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1000px;
+    }
 }
 
 header {
     position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    /* required */
+    opacity: 0.8;
 }
 
 .menu {
     background-color: teal;
     display: flex;
     justify-content: space-between;
-    position: sticky;
 }
 
 .menu ul {
@@ -42,7 +53,7 @@ header {
 }
 
 .links a:hover {
-    background-color: #203A43;
+    background-color: #203a43;
     line-height: 12px;
     padding: 15px 12px;
     border-radius: 10px;
@@ -61,7 +72,18 @@ header {
 @media screen and (max-width: 650px) {
     html,
     body {
-        overflow-x: hidden
+        overflow-x: hidden;
+    }
+    header {
+        position: sticky;
+        position: -webkit-sticky;
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -o-sticky;
+        position: -ms-sticky;
+        position: sticky;
+        top: 0;
+        /* required */
     }
     .burguer {
         display: flex;
@@ -89,10 +111,26 @@ header {
     transform: translateX(50%);
 }
 
+.nav-disable {
+    transform: translateX(100%);
+}
+
 @media screen and (max-width: 400px) {
     html,
     body {
-        overflow-x: hidden
+        overflow-x: hidden;
+    }
+    header {
+        position: sticky;
+        position: -webkit-sticky;
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -o-sticky;
+        position: -ms-sticky;
+        position: sticky;
+        top: 0;
+        /* required */
+        opacity: 1;
     }
     .links {
         position: absolute;
@@ -110,6 +148,10 @@ header {
     .nav-active {
         transform: translateX(65%);
     }
+    .nav-disable {
+        transform: translateX(300%)
+    }
+    /* Animação para Mobile */
 }
 
 .redes {
@@ -131,42 +173,42 @@ header {
 
 .linked i:hover {
     text-shadow: 0px 0px 10px #eff4f7;
-    color: #066794
+    color: #066794;
 }
 
 .twitter i:hover {
     text-shadow: 0px 0px 10px #eff4f7;
-    color: #00acee
+    color: #00acee;
 }
 
 .github i:hover {
     text-shadow: 0px 0px 10px #eff4f7;
-    color: #4e4e4e
+    color: #4e4e4e;
 }
 
 .insta i:hover {
     text-shadow: 0px 0px 10px #eff4f7;
-    color: #a517e7
+    color: #a517e7;
 }
 
-#sobre,
+#principal,
 .conteudo {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    margin-top: 15vh;
+    margin-top: 25vh;
 }
 
-#sobre h1 {
+#principal h1 {
     font-size: 35px;
 }
 
-#sobre b {
+#principal b {
     font-size: 30px;
 }
 
-#sobre p {
+#principal p {
     font-size: 25px;
     margin-top: 20px;
 }
@@ -174,19 +216,29 @@ header {
 @media screen and (max-width: 500px) {
     html,
     body {
-        overflow-x: hidden
+        overflow-x: hidden;
     }
-    #sobre {
+    header {
+        position: sticky;
+        position: -webkit-sticky;
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -o-sticky;
+        position: -ms-sticky;
+        top: 0;
+        /* required */
+    }
+    #principal {
         align-items: flex-start;
     }
-    #sobre h1 {
-        font-size: 25px;
+    #principal h1 {
+        font-size: 20px;
         margin-left: 10px;
     }
-    #sobre b {
-        font-size: 20px;
+    #principal b {
+        font-size: 15px;
     }
-    #sobre p {
+    #principal p {
         font-size: 15px;
         margin-top: 20px;
         margin-left: 10px;
@@ -198,4 +250,107 @@ header {
         margin-left: 15px;
         margin-top: 5px;
     }
+}
+
+.texto1 {
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: texto 3s;
+}
+
+.texto2,
+b,
+.conteudo {
+    animation: texto1 4s;
+}
+
+.texto2 b {
+    font-size: 30px;
+    color: #3ed3bf;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+@keyframes texto {
+    0% {
+        color: rgb(32, 32, 32);
+        /* margin-bottom: -80px; */
+    }
+    30% {
+        letter-spacing: 15px;
+        /* margin-bottom: -40px; */
+    }
+    85% {
+        letter-spacing: 8px;
+        /* margin-bottom: -40px; */
+    }
+}
+
+@keyframes texto1 {
+    0% {
+        color: rgb(32, 32, 32);
+    }
+    30% {
+        color: rgb(32, 32, 32);
+    }
+    85% {
+        /* letter-spacing: 8px; */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* Animação para Mobile */
+    .texto1 {
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        position: relative;
+        animation: texto2 3s;
+    }
+    .texto2,
+    b,
+    .conteudo {
+        animation: texto3 4s;
+    }
+    .texto2 b {
+        font-size: 20px;
+        color: #3ed3bf;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    @keyframes texto2 {
+        0% {
+            color: rgb(32, 32, 32);
+            /* margin-bottom: -80px; */
+        }
+        30% {
+            letter-spacing: 2.5px;
+            /* margin-bottom: -40px; */
+        }
+        85% {
+            /* letter-spacing: 2px; */
+            /* margin-bottom: -40px; */
+        }
+    }
+    @keyframes texto3 {
+        0% {
+            color: rgb(32, 32, 32);
+        }
+        30% {
+            color: rgb(32, 32, 32);
+        }
+        85% {
+            /* letter-spacing: 8px; */
+        }
+    }
+}
+
+#sobre {
+    margin-top: 50vh;
 }
