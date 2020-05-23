@@ -75,15 +75,12 @@ header {
         overflow-x: hidden;
     }
     header {
-        position: sticky;
-        position: -webkit-sticky;
-        position: -webkit-sticky;
-        position: -moz-sticky;
-        position: -o-sticky;
-        position: -ms-sticky;
-        position: sticky;
-        top: 0;
-        /* required */
+        position: fixed;
+        width: 100vw;
+        opacity: 1;
+    }
+    .redes {
+        margin-top: 53px;
     }
     .burguer {
         display: flex;
@@ -92,15 +89,18 @@ header {
         margin-right: 50px;
         cursor: pointer;
     }
+    .menu ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
     .links {
         position: absolute;
         right: 0px;
-        height: 50vh;
+        height: 100vh;
         top: 50px;
         background-color: teal;
-        display: flex;
         flex-direction: column;
-        align-items: center;
         width: 40%;
         transform: translateX(200%);
         transition: transform 0.5s ease-in;
@@ -111,26 +111,15 @@ header {
     transform: translateX(50%);
 }
 
-.nav-disable {
-    transform: translateX(100%);
-}
-
 @media screen and (max-width: 400px) {
     html,
     body {
         overflow-x: hidden;
     }
-    header {
-        position: sticky;
-        position: -webkit-sticky;
-        position: -webkit-sticky;
-        position: -moz-sticky;
-        position: -o-sticky;
-        position: -ms-sticky;
-        position: sticky;
-        top: 0;
-        /* required */
-        opacity: 1;
+    .menu ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
     .links {
         position: absolute;
@@ -218,16 +207,6 @@ header {
     body {
         overflow-x: hidden;
     }
-    header {
-        position: sticky;
-        position: -webkit-sticky;
-        position: -webkit-sticky;
-        position: -moz-sticky;
-        position: -o-sticky;
-        position: -ms-sticky;
-        top: 0;
-        /* required */
-    }
     #principal {
         align-items: flex-start;
     }
@@ -303,7 +282,14 @@ b,
 }
 
 @media screen and (max-width: 400px) {
-    /* Animação para Mobile */
+    header {
+        position: fixed;
+        width: 100vw;
+        opacity: 1;
+    }
+    .redes {
+        margin-top: 57px;
+    }
     .texto1 {
         color: white;
         font-size: 20px;
