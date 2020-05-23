@@ -207,6 +207,9 @@ header {
     body {
         overflow-x: hidden;
     }
+    .redes i {
+        margin-left: 10px;
+    }
     #principal {
         align-items: flex-start;
     }
